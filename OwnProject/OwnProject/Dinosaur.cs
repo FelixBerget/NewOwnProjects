@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace OwnProject
@@ -9,10 +10,12 @@ namespace OwnProject
         string name;
         string description;
         string type;
-        public Dinosaur(string newName, string newDescription, string newType) { 
+        string length;
+        public Dinosaur(string newName, string newDescription, string newType, string newLength) { 
             name = newName;
             description = newDescription;
             type = newType;
+            length = newLength;
         }
 
         public string getName()
@@ -26,6 +29,10 @@ namespace OwnProject
         public string getType()
         {
             return type;
+        }
+        public string getLength()
+        {
+            return length;
         }
     }
 }

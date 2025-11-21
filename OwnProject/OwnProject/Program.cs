@@ -9,19 +9,19 @@ namespace OwnProject
         static void Main(string[] args)
         {
 
-            Dinosaur TRex = new Dinosaur("Tyrannosaurus Rex", "Stor kjøtteter med største bitekraften til en dinosaur og er tyngste kjøttetende dinosauren","Theropod");
+            Dinosaur TRex = new Dinosaur("Tyrannosaurus Rex", "Stor kjøtteter med største bitekraften til en dinosaur og er tyngste kjøttetende dinosauren","Theropod","13");
             DinoFacts.addDino(TRex);
-            Dinosaur Diplodocus = new Dinosaur("Diplodocus", "Stor planteeter som potensielt veltet trær med kroppsvekten sin og var så store at nesten ingen jaktet på dem", "Sauropod");
+            Dinosaur Diplodocus = new Dinosaur("Diplodocus", "Stor planteeter som potensielt veltet trær med kroppsvekten sin og var så store at nesten ingen jaktet på dem", "Sauropod","24");
             DinoFacts.addDino(Diplodocus);
-            Dinosaur Therizinosaurus = new Dinosaur("Therizinosaurus", "Stor planteter med lange klør som ble brukt til selvvforvar og til å kutte angripere", "Theropod");
+            Dinosaur Therizinosaurus = new Dinosaur("Therizinosaurus", "Stor planteter med lange klør som ble brukt til selvvforvar og til å kutte angripere", "Theropod","9");
             DinoFacts.addDino(Therizinosaurus);
-            Dinosaur Velociraptor = new Dinosaur("Velociraptor", "Liten kjøtteter med stor klo på den ene delen av foten som hjalp med å ta stort bytte", "Theropod");
+            Dinosaur Velociraptor = new Dinosaur("Velociraptor", "Liten kjøtteter med stor klo på den ene delen av foten som hjalp med å ta stort bytte", "Theropod","1.5");
             DinoFacts.addDino(Velociraptor);
-            Dinosaur Archeopterix = new Dinosaur("Archeopterix", "Liten liten kjøtteter som kunne fly som en moderne fugl", "Theropod");
+            Dinosaur Archeopterix = new Dinosaur("Archeopterix", "Liten liten kjøtteter som kunne fly som en moderne fugl", "Theropod","1");
             DinoFacts.addDino(Archeopterix);
-            Dinosaur Iguanadon = new Dinosaur("Iguanadon", "Stor planteeter som spiser kan lage høy lyd med hornet sitt", "Hadrosaur");
+            Dinosaur Iguanadon = new Dinosaur("Iguanadon", "Stor planteeter som spiser kan lage høy lyd med hornet sitt", "Hadrosaur","10");
             DinoFacts.addDino(Iguanadon);
-            Dinosaur Argentinosaurus = new Dinosaur("Argentinosaurus", "Gigantisk planteeter som var potensielt største landdyret som noensinne har eksistert, levde i flokk", "Sauropod");
+            Dinosaur Argentinosaurus = new Dinosaur("Argentinosaurus", "Gigantisk planteeter som var potensielt største landdyret som noensinne har eksistert, levde i flokk", "Sauropod","33");
             DinoFacts.addDino(Argentinosaurus);
             while (true)
             {
