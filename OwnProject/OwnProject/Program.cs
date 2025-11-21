@@ -15,11 +15,11 @@ namespace OwnProject
             DinoFacts.addDino(Diplodocus);
             Dinosaur Therizinosaurus = new Dinosaur("Therizinosaurus", "Stor planteter med lange klør som ble brukt til selvvforvar og til å kutte angripere", "Theropod","9","6");
             DinoFacts.addDino(Therizinosaurus);
-            Dinosaur Velociraptor = new Dinosaur("Velociraptor", "Liten kjøtteter med stor klo på den ene delen av foten som hjalp med å ta stort bytte", "Theropod","1.5","0.1");
+            Dinosaur Velociraptor = new Dinosaur("Velociraptor", "Liten kjøtteter med stor klo på den ene delen av foten som hjalp med å ta stort bytte i grupper", "Theropod","1.5","0.1");
             DinoFacts.addDino(Velociraptor);
-            Dinosaur Archeopterix = new Dinosaur("Archeopterix", "Liten liten kjøtteter som kunne fly som en moderne fugl", "Theropod","1","0.03");
+            Dinosaur Archeopterix = new Dinosaur("Archeopterix", "Liten liten kjøtteter som kunne fly som en moderne fugl, og jaktet småbytte", "Theropod","1","0.03");
             DinoFacts.addDino(Archeopterix);
-            Dinosaur Iguanadon = new Dinosaur("Iguanadon", "Stor planteeter som spiser kan lage høy lyd med hornet sitt", "Hadrosaur","10","8");
+            Dinosaur Iguanadon = new Dinosaur("Iguanadon", "Stor planteeter kunne lage høy lyd med hornet sitt, den kunne også løpe ganske fort", "Hadrosaur","10","8");
             DinoFacts.addDino(Iguanadon);
             Dinosaur Argentinosaurus = new Dinosaur("Argentinosaurus", "Gigantisk planteeter som var potensielt største landdyret som noensinne har eksistert, levde i flokk", "Sauropod","33","100");
             DinoFacts.addDino(Argentinosaurus);
