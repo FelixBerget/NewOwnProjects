@@ -59,14 +59,12 @@ namespace OwnProject
                 }
                 else if(index == "søk")
                 {
-                    Console.WriteLine("Søk i beskrivelsene nå");
-                    string searchInText = Console.ReadLine();
+                    string searchInText = ReadAnotherLine("Søk i beskrivelsene nå");
                     Console.WriteLine(DinoFacts.searchInDescriptions(searchInText));
                 }
                 else if(index == "navnsøk")
                 {
-                    Console.WriteLine("Søk med dinosaur navn");
-                    string searchName = Console.ReadLine();
+                    string searchName = ReadAnotherLine("Søk med dinosaur navn");
                     Console.WriteLine(DinoFacts.getDinosaurByName(searchName));
                 }
                 else if (index == "")
@@ -85,6 +83,11 @@ namespace OwnProject
                 }
 
             }
+        }
+        public static string ReadAnotherLine(string question)
+        {
+            Console.WriteLine(question);
+            return Console.ReadLine();
         }
     }
 }
