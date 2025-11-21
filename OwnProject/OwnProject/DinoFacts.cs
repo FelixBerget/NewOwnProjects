@@ -17,7 +17,7 @@ namespace OwnProject
             string returnString = "";
             for (int i = 0; i < Dinosaurs.Count; i++)
             {
-                returnString += "Nummmer" + i + "-" + Dinosaurs[i].getName() + "\n";
+                returnString += "Nummmer " + i + " - " + Dinosaurs[i].getName() + "\n";
             }
             return returnString;
         }
@@ -43,7 +43,44 @@ namespace OwnProject
             {
                 if (Dinosaurs[i].getType() == "Theropod")
                 {
-                    returnString += "Nummmer" + i + "-" + Dinosaurs[i].getName() + "\n";
+                    returnString += "Nummmer " + i + " - " + Dinosaurs[i].getName() + "\n";
+                }
+            }
+            return returnString;
+        }
+        public static string getAllSauropods()
+        {
+            string returnString = "";
+            for (int i = 0; i < Dinosaurs.Count; i++)
+            {
+                if (Dinosaurs[i].getType() == "Sauropod")
+                {
+                    returnString += "Nummmer " + i + " - " + Dinosaurs[i].getName() + "\n";
+                }
+            }
+            return returnString;
+        }
+        public static string getAllHadrosaurs()
+        {
+            string returnString = "";
+            for (int i = 0; i < Dinosaurs.Count; i++)
+            {
+                if (Dinosaurs[i].getType() == "Hadrosaur")
+                {
+                    returnString += "Nummmer " + i + " - " + Dinosaurs[i].getName() + "\n";
+                }
+            }
+            return returnString;
+        }
+        public static string searchInDescriptions(string searchWith)
+        {
+            string returnString = "";
+            string searchWithLower = searchWith.ToLower();
+            for(int i = 0; i< Dinosaurs.Count; i++)
+            {
+                string searchInLower = Dinosaurs[i].getDescription().ToLower();
+                if (searchInLower.Contains(searchWithLower)){
+                    returnString += "Nummmer " + i + " - " + Dinosaurs[i].getName() + "\n";
                 }
             }
             return returnString;

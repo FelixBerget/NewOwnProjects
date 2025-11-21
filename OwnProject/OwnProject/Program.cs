@@ -19,37 +19,54 @@ namespace OwnProject
             DinoFacts.addDino(Therizinosaurus);
             Dinosaur Archeopterix = new Dinosaur("Archeopterix", "Liten liten kjøtteter som kunne fly som en moderne fugl", "Theropod");
             DinoFacts.addDino(Archeopterix);
+            Dinosaur Iguanadon = new Dinosaur("Iguanadon", "Stor planteter som spiser kan lage høy lyd med hornet sitt", "Hadrosaur");
+            DinoFacts.addDino(Iguanadon);
             while (true)
             {
-                Console.WriteLine("Finn ut fakta om dinosaur med en indeks skriv menu for å få listen skrevet opp");
+                Console.WriteLine("Finn ut fakta om dinosaur med en indeks, eller arttypen, skriv meny for å få listen skrevet opp, skriv hjelp for å få mer hjelp og skriv ingenting for å avslutte");
                 string index = Console.ReadLine();
                 index = index.ToLower();
                 bool notValid = false;
+                for (int i = 0; i < index.Length; i++)
+                {
+                    if (!"123456789".Contains(index[i])) 
+                    {
+                        notValid = true;
+                    }
+                }
+                ;
                 if (index == "theropod")
                 {
                     Console.WriteLine(DinoFacts.getAllTheropods());
+                }
+                else if (index == "sauropod")
+                {
+                    Console.WriteLine(DinoFacts.getAllSauropods());
+                }
+                else if (index == "hadrosaur")
+                {
+                    Console.WriteLine(DinoFacts.getAllHadrosaurs());
                 }
                 else if (index == "meny")
                 {
                     Console.WriteLine(DinoFacts.getMenu());
                 }
-                else if(index == "hjelp")
+                else if (index == "hjelp")
                 {
                     Console.WriteLine(DinoFacts.GetHelp());
                 }
+                else if(index == "søk")
+                {
+                    Console.WriteLine("Søk i beskrivelsene nå");
+                    string searchInText = Console.ReadLine();
+                    Console.WriteLine(DinoFacts.searchInDescriptions(searchInText));
+                }
                 else if (index == "")
                 {
-                    Console.WriteLine("Bruk indeks\n");
+                    Console.WriteLine("Ferdig");
                     return;
                 }
-                for (int i = 0; i < index.Length; i++)
-                {
-                    if (!"123456789".Contains(index[i])) ;
-                    {
-                        notValid= true;
-                    }
-                };
-                if (!notValid)
+                else if (!notValid)
                 {
                     int intIndex = Convert.ToInt32(index);
                     Console.WriteLine(DinoFacts.getDinoInfo(intIndex));
