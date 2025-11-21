@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace OwnProject
@@ -95,7 +96,7 @@ namespace OwnProject
                 string searchInLower = Dinosaurs[i].getName().ToLower();
                 if (searchInLower==searchName)
                 {
-                    return Dinosaurs[i].getName() + "\n" + Dinosaurs[i].getType() + "\nInfo under\n" + Dinosaurs[i].getDescription() + "\n";
+                    return getDinoInfo(i);
                 }
             }
             return "";
