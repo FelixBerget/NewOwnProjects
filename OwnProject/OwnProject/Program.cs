@@ -31,7 +31,7 @@ namespace OwnProject
                 bool notValid = false;
                 for (int i = 0; i < index.Length; i++)
                 {
-                    if (!"123456789".Contains(index[i])) 
+                    if (!"0123456789".Contains(index[i])) 
                     {
                         notValid = true;
                     }

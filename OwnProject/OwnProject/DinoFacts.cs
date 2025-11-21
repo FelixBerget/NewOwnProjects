@@ -34,7 +34,7 @@ namespace OwnProject
             if (index > Dinosaurs.Count - 1){
                 return "\n ndeks eksisterer ikke\n";
             }
-            string returnString =  "\n " + Dinosaurs[index].getName() + "\n " + Dinosaurs[index].getType() + " \n Info under\n " + Dinosaurs[index].getDescription() + " \n " + Dinosaurs[index].getLength() + " potensielt meter lang \n " + Dinosaurs[index].getWeight() + " potensielt tonn tung \n";
+            string returnString =  "\n " + Dinosaurs[index].getName() + "\n " + Dinosaurs[index].getType() + " \n Info under\n\n " + Dinosaurs[index].getDescription() + " \n " + Dinosaurs[index].getLength() + " potensielt meter lang \n " + Dinosaurs[index].getWeight() + " potensielt tonn tung \n";
             return returnString;
         }
         public static string getAllOfSource(string type)
