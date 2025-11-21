@@ -37,17 +37,9 @@ namespace OwnProject
                     }
                 }
                 ;
-                if (index == "theropod")
+                if (index == "theropod" || index == "sauropod" || index == "theropod")
                 {
-                    Console.WriteLine(DinoFacts.getAllTheropods());
-                }
-                else if (index == "sauropod")
-                {
-                    Console.WriteLine(DinoFacts.getAllSauropods());
-                }
-                else if (index == "hadrosaur")
-                {
-                    Console.WriteLine(DinoFacts.getAllHadrosaurs());
+                    Console.WriteLine(DinoFacts.getAllOfSource(index));
                 }
                 else if (index == "meny")
                 {

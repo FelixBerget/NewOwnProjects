@@ -37,37 +37,13 @@ namespace OwnProject
             string returnString =  "\n " + Dinosaurs[index].getName() + "\n" + Dinosaurs[index].getType() + "\nInfo under\n" + Dinosaurs[index].getDescription() + "\n";
             return returnString;
         }
-
-        public static string getAllTheropods()
+        public static string getAllOfSource(string type)
         {
             string returnString = "\n";
+            string lowerType = type.ToLower();
             for (int i = 0; i < Dinosaurs.Count; i++)
             {
-                if (Dinosaurs[i].getType() == "Theropod")
-                {
-                    returnString += "\n Nummmer " + i + " - " + Dinosaurs[i].getName() + "\n";
-                }
-            }
-            return returnString;
-        }
-        public static string getAllSauropods()
-        {
-            string returnString = "\n";
-            for (int i = 0; i < Dinosaurs.Count; i++)
-            {
-                if (Dinosaurs[i].getType() == "Sauropod")
-                {
-                    returnString += "\n Nummmer " + i + " - " + Dinosaurs[i].getName() + "\n";
-                }
-            }
-            return returnString;
-        }
-        public static string getAllHadrosaurs()
-        {
-            string returnString = "\n";
-            for (int i = 0; i < Dinosaurs.Count; i++)
-            {
-                if (Dinosaurs[i].getType() == "Hadrosaur")
+                if (Dinosaurs[i].getType().ToLower() == lowerType)
                 {
                     returnString += "\n Nummmer " + i + " - " + Dinosaurs[i].getName() + "\n";
                 }
