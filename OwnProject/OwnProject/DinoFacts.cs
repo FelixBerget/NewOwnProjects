@@ -77,5 +77,20 @@ namespace OwnProject
             }
             return "\n Finner ikke dinosauren \n ";
         }
+
+        public static string getByWeight(string firstWeigth, string secondWeigth) {
+            string returnString = "";
+            double firstWeightInt = Convert.ToDouble(firstWeigth);
+            double secondWeightInt = Convert.ToDouble(secondWeigth);
+            for (int i = 0; i < Dinosaurs.Count; i++)
+            {
+                if (Convert.ToDouble(Dinosaurs[i].getWeight())<secondWeightInt && Convert.ToDouble(Dinosaurs[i].getWeight())> firstWeightInt)
+                {
+                    returnString += "\n Nummmer " + i + " - " + Dinosaurs[i].getName() + "\n";
+                }
+            }
+            return returnString;
+
+        }
     }
 }

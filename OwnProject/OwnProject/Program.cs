@@ -35,8 +35,7 @@ namespace OwnProject
                     {
                         notValid = true;
                     }
-                }
-                ;
+                };
                 if (index == "theropod" || index == "sauropod" || index == "hadrosaur")
                 {
                     Console.WriteLine(DinoFacts.getAllOfSource(index));
@@ -49,12 +48,19 @@ namespace OwnProject
                 {
                     Console.WriteLine(DinoFacts.GetHelp());
                 }
-                else if(index == "søk")
+                else if(index == "mellom vekt")
+                {
+                    string first = ReadAnotherLine("Nederste vekt");
+                    string second = ReadAnotherLine("Øverste vekt");
+                    DinoFacts.getByWeight(first, second);
+
+                }
+                else if (index == "søk")
                 {
                     string searchInText = ReadAnotherLine("Søk i beskrivelsene nå");
                     Console.WriteLine(DinoFacts.searchInDescriptions(searchInText));
                 }
-                else if(index == "navnsøk")
+                else if (index == "navnsøk")
                 {
                     string searchName = ReadAnotherLine("Søk med dinosaur navn");
                     Console.WriteLine(DinoFacts.getDinosaurByName(searchName));
