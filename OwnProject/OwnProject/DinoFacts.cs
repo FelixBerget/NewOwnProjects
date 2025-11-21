@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 
 namespace OwnProject
@@ -25,7 +26,7 @@ namespace OwnProject
         public static string GetHelp()
         {
 
-            return "For meny skriv (meny) og for indeksen så skriv f.eks. 2\n";
+            return "For meny skriv (meny), for spesifikke dinosaur typer skriv arttypen f.eks.(theropod), for å søke i beskrivelsen som f.eks. kjøtteter skriv (søk), for å søke direkte etter navn så skriv (navnsøk), og for dinosaur så skriv f.eks. (2)\n";
         }
         public static string getDinoInfo(int index)
         {
@@ -84,6 +85,20 @@ namespace OwnProject
                 }
             }
             return returnString;
+        }
+        public static string getDinosaurByName(string name)
+        {
+            string searchName = name.ToLower();
+            string returnString;
+            for(int i = 0;i< Dinosaurs.Count; i++)
+            {
+                string searchInLower = Dinosaurs[i].getName().ToLower();
+                if (searchInLower==searchName)
+                {
+                    return Dinosaurs[i].getName() + "\n" + Dinosaurs[i].getType() + "\nInfo under\n" + Dinosaurs[i].getDescription() + "\n";
+                }
+            }
+            return "";
         }
     }
 }

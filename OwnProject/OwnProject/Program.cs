@@ -16,14 +16,14 @@ namespace OwnProject
             Dinosaur Therizinosaurus = new Dinosaur("Therizinosaurus", "Stor planteter med lange klør som ble brukt til selvvforvar og til å kutte angripere", "Theropod");
             DinoFacts.addDino(Therizinosaurus);
             Dinosaur Velociraptor = new Dinosaur("Velociraptor", "Liten kjøtteter med stor klo på den ene delen av foten som hjalp med å ta stort bytte", "Theropod");
-            DinoFacts.addDino(Therizinosaurus);
+            DinoFacts.addDino(Velociraptor);
             Dinosaur Archeopterix = new Dinosaur("Archeopterix", "Liten liten kjøtteter som kunne fly som en moderne fugl", "Theropod");
             DinoFacts.addDino(Archeopterix);
             Dinosaur Iguanadon = new Dinosaur("Iguanadon", "Stor planteter som spiser kan lage høy lyd med hornet sitt", "Hadrosaur");
             DinoFacts.addDino(Iguanadon);
             while (true)
             {
-                Console.WriteLine("Finn ut fakta om dinosaur med en indeks, eller arttypen, skriv meny for å få listen skrevet opp, skriv hjelp for å få mer hjelp og skriv ingenting for å avslutte");
+                Console.WriteLine("Finn ut fakta om dinosaur med en indeks, eller finn dem med arttypen, skriv meny for å få listen skrevet opp, skriv hjelp for å få mer hjelp og skriv ingenting for å avslutte");
                 string index = Console.ReadLine();
                 index = index.ToLower();
                 bool notValid = false;
@@ -60,6 +60,12 @@ namespace OwnProject
                     Console.WriteLine("Søk i beskrivelsene nå");
                     string searchInText = Console.ReadLine();
                     Console.WriteLine(DinoFacts.searchInDescriptions(searchInText));
+                }
+                else if(index == "navnsøk")
+                {
+                    Console.WriteLine("Søk med dinosaur navn");
+                    string searchName = Console.ReadLine();
+                    Console.WriteLine(DinoFacts.getDinosaurByName(searchName));
                 }
                 else if (index == "")
                 {
