@@ -25,9 +25,7 @@ namespace OwnProject
             DinoFacts.addDino(Argentinosaurus);
             while (true)
             {
-                Console.WriteLine("Finn ut fakta om dinosaur med en indeks, eller finn dem med arttypen, skriv meny for å få listen skrevet opp, skriv hjelp for å få mer hjelp og skriv ingenting for å avslutte");
-                string index = Console.ReadLine();
-                index = index.ToLower();
+                string index = ReadAnotherLine("Finn ut fakta om dinosaur med en indeks, eller finn dem med arttypen, skriv meny for å få listen skrevet opp, skriv hjelp for å få mer hjelp og skriv ingenting for å avslutte").ToLower();
                 bool notValid = false;
                 for (int i = 0; i < index.Length; i++)
                 {
@@ -52,22 +50,22 @@ namespace OwnProject
                 {
                     string first = ReadAnotherLine("Nederste vekt");
                     string second = ReadAnotherLine("Øverste vekt");
-                    DinoFacts.getByWeight(first, second);
+                    Console.WriteLine(DinoFacts.getByWeight(first, second));
 
                 }
-                else if (index == "søk")
+                else if (index == "beskrivelsesøk")
                 {
                     string searchInText = ReadAnotherLine("Søk i beskrivelsene nå");
                     Console.WriteLine(DinoFacts.searchInDescriptions(searchInText));
                 }
                 else if (index == "navnsøk")
                 {
-                    string searchName = ReadAnotherLine("Søk med dinosaur navn");
+                    string searchName = ReadAnotherLine("Søk med dinosaur navn");   
                     Console.WriteLine(DinoFacts.getDinosaurByName(searchName));
                 }
                 else if (index == "")
                 {
-                    Console.WriteLine("Ferdig");
+                    Console.WriteLine(" Ferdig");
                     return;
                 }
                 else if (!notValid)
@@ -77,7 +75,7 @@ namespace OwnProject
                 }
                 else
                 {
-                    Console.WriteLine("Inputen din er ikke valid \n"); ;
+                    Console.WriteLine("\n Inputen din er ikke valid \n"); ;
                 }
 
             }
