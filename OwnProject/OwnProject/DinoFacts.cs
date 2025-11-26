@@ -92,5 +92,15 @@ namespace OwnProject
             return returnString;
 
         }
+
+        public static string makeSound(int index)
+        {
+            if (index > Dinosaurs.Count - 1)
+            {
+                return "\n Indeks eksisterer ikke\n";
+            }
+            string returnString = "\n " + Dinosaurs[index].makeSound();
+            return returnString;
+        }
     }
 }

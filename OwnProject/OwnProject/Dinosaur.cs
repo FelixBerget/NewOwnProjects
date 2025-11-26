@@ -6,19 +6,15 @@ using System.Text;
 
 namespace OwnProject
 {
-    internal class Dinosaur
+    public class Dinosaur : Lizard
     {
-        string name;
-        string description;
-        string type;
-        string length;
-        string weight;
-        public Dinosaur(string newName, string newDescription, string newType, string newLength, string newWeight) { 
+        public Dinosaur(string newName, string newDescription, string newType, string newLength, string newWeight, string newSound) { 
             name = newName;
             description = newDescription;
             type = newType;
             length = newLength;
             weight = newWeight;
+            sound = newSound;
         }
 
         public string getName()
