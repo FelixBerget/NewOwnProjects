@@ -6,6 +6,11 @@ namespace OwnProject
 {
     public class Crocodilian : Lizard
     {
+        public string teethNumber { get; set; }
+        public string getTeethNumber()
+        {
+            return teethNumber;
+        }
 
         public string getName()
         {
