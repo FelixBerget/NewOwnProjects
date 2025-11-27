@@ -100,7 +100,7 @@ namespace OwnProject
         {
             if (index > Dinosaurs.Count - 1)
             {
-                return "\n Indeks eksisterer ikke i dinosaurer\n";
+                return "\n Indeks eksisterer ikke for dinosaur\n";
             }
             string returnString = "\n " + Dinosaurs[index].makeSound() + "\n";
             return returnString;

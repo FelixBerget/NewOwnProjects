@@ -102,7 +102,7 @@ namespace OwnProject
         {
             if (index > Crocodilians.Count - 1)
             {
-                return "\n Indeks eksisterer ikke i krokodiller\n";
+                return "\n Indeks eksisterer ikke for krokodille\n";
             }
             string returnString = "\n " + Crocodilians[index].makeSound() + "\n";
             return returnString;

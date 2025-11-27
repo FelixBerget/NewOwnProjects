@@ -35,7 +35,7 @@ namespace OwnProject
         {
             if (index > Lizards.Count - 1)
             {
-                return "\n Indeks eksisterer ikke\n";
+                return "\n Indeks eksisterer ikke for øgle\n";
             }
             string returnString = "\n " + Lizards[index].getName() + "\n " + Lizards[index].getType() + " \n Info under\n\n " + Lizards[index].getDescription() + " \n " + Lizards[index].getLength() + " centermeter lang potensielt \n " + Lizards[index].getWeight() + " kilo tung potensielt \n";
             return returnString;
@@ -102,7 +102,7 @@ namespace OwnProject
         {
             if (index > Lizards.Count - 1)
             {
-                return "\n Indeks eksisterer ikke\n";
+                return "\n Indeks eksisterer ikke for øgle\n";
             }
             string returnString = "\n " + Lizards[index].makeSound() + "\n";
             return returnString;
