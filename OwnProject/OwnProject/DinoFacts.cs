@@ -13,7 +13,10 @@ namespace OwnProject
         {
             Dinosaurs.Add(dinosaur);
         }
-
+        public static int getListLength()
+        {
+            return Dinosaurs.Count; 
+        }
         public static string getMenu()
         {
             string returnString = "\n";
@@ -27,7 +30,7 @@ namespace OwnProject
         public static string GetHelp()
         {
 
-            return "\n For meny skriv (meny), for spesifikke dinosaur typer skriv arttypen f.eks.(theropod), for å søke i beskrivelsen som f.eks. kjøtteter skriv (søk), for å søke direkte etter navn så skriv (navnsøk), og for dinosaur så skriv f.eks. (2)\n";
+            return "\n For meny skriv (meny), for spesifikke dinosaur typer skriv arttypen f.eks.(theropod), for å søke i beskrivelsen som f.eks. kjøtteter skriv (søk), for å søke direkte etter navn så skriv (navnsøk), og for dinosaur så skriv f.eks. (2) Skriv til dinosaur eller krokodille etter dem\n";
         }
         public static string getDinoInfo(int index)
         {
@@ -99,7 +102,7 @@ namespace OwnProject
             {
                 return "\n Indeks eksisterer ikke\n";
             }
-            string returnString = "\n " + Dinosaurs[index].makeSound();
+            string returnString = "\n " + Dinosaurs[index].makeSound() + "\n";
             return returnString;
         }
     }

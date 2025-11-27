@@ -23,6 +23,11 @@ namespace OwnProject
             DinoFacts.addDino(Iguanadon);
             Dinosaur Argentinosaurus = new Dinosaur("Argentinosaurus", "Gigantisk planteeter som var potensielt største landdyret som noensinne har eksistert, levde i flokk", "Sauropod","33","100","hmmmmm");
             DinoFacts.addDino(Argentinosaurus);
+
+            Crocodilian SaltwaterCrocodile = new Crocodilian("Saltvannskrokodille","Største nålevede krokodille","Krokodille","9","2","hrrr","100");
+            CrocodileInfo.addCrocodile(SaltwaterCrocodile);
+            Crocodilian AmericanAlligator = new Crocodilian("Amerikansk Alligator", "Kraftig alligator fra sørstatene i USA", "Alligator", "4", "0.5", "hrr", "100");
+            CrocodileInfo.addCrocodile(AmericanAlligator);
             while (true)
             {
                 string index = ReadAnotherLine("Finn ut fakta om dinosaur med en indeks, eller finn dem med arttypen, skriv meny for å få listen skrevet opp, skriv hjelp for å få mer hjelp og skriv ingenting for å avslutte").ToLower();
@@ -34,9 +39,10 @@ namespace OwnProject
                         notValid = true;
                     }
                 };
-                if (index == "theropod" || index == "sauropod" || index == "hadrosaur")
+                if (index == "theropod" || index == "sauropod" || index == "hadrosaur" || index == "alligator"|| index == "krokodille")
                 {
                     Console.WriteLine(DinoFacts.getAllOfSource(index));
+                    Console.WriteLine(CrocodileInfo.getAllOfSource(index));
                 }
                 else if (index == "meny")
                 {
@@ -46,27 +52,35 @@ namespace OwnProject
                 {
                     Console.WriteLine(DinoFacts.GetHelp());
                 }
-                else if (index == "lag lyd")
+                else if (index == "lag lyd til dinosaur")
                 {
-                    string sound = ReadAnotherLine("Søk dinosaurd med index for å lage lyd");
+                    string sound = ReadAnotherLine("Søk dinosaur med index for å lage lyd");
                     Console.WriteLine(DinoFacts.makeSound(Convert.ToInt32(sound)));
+                }
+                else if (index == "lag lyd til krokodille")
+                {
+                    string sound = ReadAnotherLine("Søk krokodille med index for å lage lyd");
+                    Console.WriteLine(CrocodileInfo.makeSound(Convert.ToInt32(sound)));
                 }
                 else if (index == "mellom vekt")
                 {
                     string first = ReadAnotherLine("Nederste vekt");
                     string second = ReadAnotherLine("Øverste vekt");
                     Console.WriteLine(DinoFacts.getByWeight(first, second));
+                    Console.WriteLine(CrocodileInfo.getByWeight(first, second));
 
                 }
                 else if (index == "beskrivelsesøk")
                 {
                     string searchInText = ReadAnotherLine("Søk i beskrivelsene nå");
                     Console.WriteLine(DinoFacts.searchInDescriptions(searchInText));
+                    Console.WriteLine(CrocodileInfo.searchInDescriptions(searchInText));
                 }
                 else if (index == "navnsøk")
                 {
                     string searchName = ReadAnotherLine("Søk med dinosaur navn");
                     Console.WriteLine(DinoFacts.getDinosaurByName(searchName));
+                    Console.WriteLine(CrocodileInfo.getCrocodilianByName(searchName));
                 }
                 else if (index == "")
                 {
@@ -77,6 +91,10 @@ namespace OwnProject
                 {
                     int intIndex = Convert.ToInt32(index);
                     Console.WriteLine(DinoFacts.getDinoInfo(intIndex));
+                    if(intIndex <= DinoFacts.getListLength()){
+                        Console.WriteLine(CrocodileInfo.getCrocodileInfo(intIndex - DinoFacts.getListLength()));
+
+                    }
                 }
                 else
                 {
