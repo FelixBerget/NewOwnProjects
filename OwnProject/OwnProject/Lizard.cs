@@ -12,6 +12,7 @@ namespace OwnProject
         public string length { get; set; }
         public string weight { get; set; }
         public string sound { get; set; }
+
         public string makeSound()
         {
             return sound;

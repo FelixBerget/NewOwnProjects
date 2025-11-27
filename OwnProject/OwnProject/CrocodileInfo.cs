@@ -48,7 +48,7 @@ namespace OwnProject
             {
                 if (Crocodilians[i].getType().ToLower() == lowerType)
                 {
-                    returnString += "\n Nummmer " + i + " - " + Crocodilians[i].getName() + "\n";
+                    returnString += "\n Nummmer " + (i + DinoFacts.getListLength()) + " - " + Crocodilians[i].getName() + "\n";
                 }
             }
             return returnString;
@@ -62,7 +62,7 @@ namespace OwnProject
                 string searchInLower = Crocodilians[i].getDescription().ToLower();
                 if (searchInLower.Contains(searchWithLower))
                 {
-                    returnString += "\n Nummmer " + i + " - " + Crocodilians[i].getName() + "\n";
+                    returnString += "\n Nummmer " + (i + DinoFacts.getListLength()) + " - " + Crocodilians[i].getName() + "\n";
                 }
             }
             return returnString;
@@ -79,7 +79,7 @@ namespace OwnProject
                     return getCrocodileInfo(i);
                 }
             }
-            return "\n Finner ikke dinosauren \n ";
+            return "\n Finner ikke krokodillen \n ";
         }
 
         public static string getByWeight(string firstWeigth, string secondWeigth)
@@ -91,7 +91,7 @@ namespace OwnProject
             {
                 if (Convert.ToDouble(Crocodilians[i].getWeight()) < secondWeightInt && Convert.ToDouble(Crocodilians[i].getWeight()) > firstWeightInt)
                 {
-                    returnString += "\n Nummmer " + i + " - " + Crocodilians[i].getName() + "\n";
+                    returnString += "\n Nummmer " + (i + DinoFacts.getListLength()) + " - " + Crocodilians[i].getName() + "\n";
                 }
             }
             return returnString;
@@ -102,7 +102,7 @@ namespace OwnProject
         {
             if (index > Crocodilians.Count - 1)
             {
-                return "\n Indeks eksisterer ikke\n";
+                return "\n Indeks eksisterer ikke i krokodiller\n";
             }
             string returnString = "\n " + Crocodilians[index].makeSound() + "\n";
             return returnString;

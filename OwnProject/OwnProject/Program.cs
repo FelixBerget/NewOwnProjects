@@ -28,6 +28,23 @@ namespace OwnProject
             CrocodileInfo.addCrocodile(SaltwaterCrocodile);
             Crocodilian AmericanAlligator = new Crocodilian("Amerikansk Alligator", "Kraftig alligator fra sørstatene i USA", "Alligator", "4", "0.5", "hrr", "100");
             CrocodileInfo.addCrocodile(AmericanAlligator);
+
+            Lizard Gecko = new Lizard();
+            Gecko.description = "Liten øgle som spiser insekter";
+            Gecko.name = "Gekko";
+            Gecko.type = "Liten Øgle";
+            Gecko.length = "30";
+            Gecko.weight = "0.5";
+            Gecko.sound = "hii";
+            Lizardinfo.addLizard(Gecko);
+            Lizard Cameleon = new Lizard();
+            Cameleon.description = "Liten øgle med lang tunge som spiser insekter";
+            Cameleon.name = "Kameleon";
+            Cameleon.type = "Kameleon";
+            Cameleon.length = "40";
+            Cameleon.weight = "1";
+            Cameleon.sound = "m m m";
+            Lizardinfo.addLizard(Cameleon);
             while (true)
             {
                 string index = ReadAnotherLine("Finn ut fakta om dinosaur med en indeks, eller finn dem med arttypen, skriv meny for å få listen skrevet opp, skriv hjelp for å få mer hjelp og skriv ingenting for å avslutte").ToLower();
@@ -47,10 +64,15 @@ namespace OwnProject
                 {
                     Console.WriteLine(CrocodileInfo.getAllOfSource(index));
                 }
+                else if (index == "liten øgle" || index == "kameleon")
+                {
+                    Console.WriteLine(Lizardinfo.getAllOfSource(index));
+                }
                 else if (index == "meny")
                 {
                     Console.WriteLine(DinoFacts.getMenu());
                     Console.WriteLine(CrocodileInfo.getMenu());
+                    Console.WriteLine(Lizardinfo.getMenu());
                 }
                 else if (index == "hjelp")
                 {
@@ -66,25 +88,37 @@ namespace OwnProject
                     string sound = ReadAnotherLine("Søk krokodille med index for å lage lyd");
                     Console.WriteLine(CrocodileInfo.makeSound(Convert.ToInt32(sound)));
                 }
+                else if (index == "lag lyd til øgle")
+                {
+                    string sound = ReadAnotherLine("Søk øgle med index for å lage lyd");
+                    Console.WriteLine(Lizardinfo.makeSound(Convert.ToInt32(sound)));
+                }
                 else if (index == "mellom vekt")
                 {
                     string first = ReadAnotherLine("Nederste vekt");
                     string second = ReadAnotherLine("Øverste vekt");
                     Console.WriteLine(DinoFacts.getByWeight(first, second));
                     Console.WriteLine(CrocodileInfo.getByWeight(first, second));
-
+                }
+                else if (index == "mellom vekt kilo")
+                {
+                    string first = ReadAnotherLine("Nederste vekt");
+                    string second = ReadAnotherLine("Øverste vekt");
+                    Console.WriteLine(Lizardinfo.getByWeight(first,second));
                 }
                 else if (index == "beskrivelsesøk")
                 {
                     string searchInText = ReadAnotherLine("Søk i beskrivelsene nå");
                     Console.WriteLine(DinoFacts.searchInDescriptions(searchInText));
                     Console.WriteLine(CrocodileInfo.searchInDescriptions(searchInText));
+                    Console.WriteLine(Lizardinfo.searchInDescriptions(searchInText));
                 }
                 else if (index == "navnsøk")
                 {
                     string searchName = ReadAnotherLine("Søk med dinosaur navn");
                     Console.WriteLine(DinoFacts.getDinosaurByName(searchName));
                     Console.WriteLine(CrocodileInfo.getCrocodilianByName(searchName));
+                    Console.WriteLine(Lizardinfo.getLizardByName(searchName));
                 }
                 else if (index == "")
                 {
@@ -98,6 +132,10 @@ namespace OwnProject
                     if (intIndex >= DinoFacts.getListLength()) {
                         Console.WriteLine(CrocodileInfo.getCrocodileInfo(intIndex - DinoFacts.getListLength()));
 
+                    }
+                    if (intIndex >= DinoFacts.getListLength() + CrocodileInfo.getListLength())
+                    {
+                        Console.WriteLine(Lizardinfo.getLizardInfo(intIndex - DinoFacts.getListLength() - CrocodileInfo.getListLength()));
                     }
                 }
                 else

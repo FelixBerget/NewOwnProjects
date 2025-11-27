@@ -7,7 +7,7 @@ namespace OwnProject
     internal class Lizardinfo
     {
         static List<Lizard> Lizards = new List<Lizard>();
-        public static void addDino(Lizard lizard)
+        public static void addLizard(Lizard lizard)
         {
             Lizards.Add(lizard);
         }
@@ -21,7 +21,7 @@ namespace OwnProject
             string returnString = "\n";
             for (int i = 0; i < Lizards.Count; i++)
             {
-                returnString += "\n Nummmer " + (i) + " - " + Lizards[i].getName() + "\n";
+                returnString += "\n Nummmer " + (i + DinoFacts.getListLength() + CrocodileInfo.getListLength()) + " - " + Lizards[i].getName() + "\n";
             }
             return returnString;
         }
@@ -31,13 +31,13 @@ namespace OwnProject
 
             return "\n For meny skriv (meny), for spesifikke dinosaur typer skriv arttypen f.eks.(theropod), for å søke i beskrivelsen som f.eks. kjøtteter skriv (søk), for å søke direkte etter navn så skriv (navnsøk), og for dinosaur så skriv f.eks. (2)\n";
         }
-        public static string getCrocodileInfo(int index)
+        public static string getLizardInfo(int index)
         {
             if (index > Lizards.Count - 1)
             {
                 return "\n Indeks eksisterer ikke\n";
             }
-            string returnString = "\n " + Lizards[index].getName() + "\n " + Lizards[index].getType() + " \n Info under\n\n " + Lizards[index].getDescription() + " \n " + Lizards[index].getLength() + " meter lang potensielt \n " + Lizards[index].getWeight() + " tonn tung potensielt \n";
+            string returnString = "\n " + Lizards[index].getName() + "\n " + Lizards[index].getType() + " \n Info under\n\n " + Lizards[index].getDescription() + " \n " + Lizards[index].getLength() + " centermeter lang potensielt \n " + Lizards[index].getWeight() + " kilo tung potensielt \n";
             return returnString;
         }
         public static string getAllOfSource(string type)
@@ -48,7 +48,7 @@ namespace OwnProject
             {
                 if (Lizards[i].getType().ToLower() == lowerType)
                 {
-                    returnString += "\n Nummmer " + i + " - " + Lizards[i].getName() + "\n";
+                    returnString += "\n Nummmer " + (i + DinoFacts.getListLength() + CrocodileInfo.getListLength()) + " - " + Lizards[i].getName() + "\n";
                 }
             }
             return returnString;
@@ -62,12 +62,12 @@ namespace OwnProject
                 string searchInLower = Lizards[i].getDescription().ToLower();
                 if (searchInLower.Contains(searchWithLower))
                 {
-                    returnString += "\n Nummmer " + i + " - " + Lizards[i].getName() + "\n";
+                    returnString += "\n Nummmer " + (i + DinoFacts.getListLength() + CrocodileInfo.getListLength()) + " - " + Lizards[i].getName() + "\n";
                 }
             }
             return returnString;
         }
-        public static string getCrocodilianByName(string name)
+        public static string getLizardByName(string name)
         {
             string searchName = name.ToLower();
             string returnString = "";
@@ -76,10 +76,10 @@ namespace OwnProject
                 string searchInLower = Lizards[i].getName().ToLower();
                 if (searchInLower == searchName)
                 {
-                    return getCrocodileInfo(i);
+                    return getLizardInfo(i);
                 }
             }
-            return "\n Finner ikke dinosauren \n ";
+            return "\n Finner ikke øglen \n ";
         }
 
         public static string getByWeight(string firstWeigth, string secondWeigth)
@@ -91,7 +91,7 @@ namespace OwnProject
             {
                 if (Convert.ToDouble(Lizards[i].getWeight()) < secondWeightInt && Convert.ToDouble(Lizards[i].getWeight()) > firstWeightInt)
                 {
-                    returnString += "\n Nummmer " + i + " - " + Lizards[i].getName() + "\n";
+                    returnString += "\n Nummmer " + (i + DinoFacts.getListLength() + CrocodileInfo.getListLength()) + " - " + Lizards[i].getName() + "\n";
                 }
             }
             return returnString;
