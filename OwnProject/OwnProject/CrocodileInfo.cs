@@ -35,7 +35,7 @@ namespace OwnProject
         {
             if (index > Crocodilians.Count - 1)
             {
-                return "\n Indeks eksisterer ikke\n";
+                return "\n Indeks eksisterer ikke for krokodille\n";
             }
             string returnString = "\n " + Crocodilians[index].getName() + "\n " + Crocodilians[index].getType() + " \n Info under\n\n " + Crocodilians[index].getDescription() + " \n " + Crocodilians[index].getLength() + " meter lang potensielt \n " + Crocodilians[index].getWeight() + " tonn tung potensielt \n";
             return returnString;

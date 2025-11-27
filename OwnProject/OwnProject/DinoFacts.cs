@@ -35,7 +35,7 @@ namespace OwnProject
         public static string getDinoInfo(int index)
         {
             if (index > Dinosaurs.Count - 1){
-                return "\n Indeks eksisterer ikke\n";
+                return "\n Indeks eksisterer ikke for dinosaur\n";
             }
             string returnString =  "\n " + Dinosaurs[index].getName() + "\n " + Dinosaurs[index].getType() + " \n Info under\n\n " + Dinosaurs[index].getDescription() + " \n " + Dinosaurs[index].getLength() + " meter lang potensielt \n " + Dinosaurs[index].getWeight() + " tonn tung potensielt \n";
             return returnString;

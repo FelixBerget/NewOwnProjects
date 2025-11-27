@@ -21,21 +21,5 @@ namespace OwnProject
         {
             return name;
         }
-        public string getDescription()
-        {
-            return description;
-        }
-        public string getType()
-        {
-            return type;
-        }
-        public string getLength()
-        {
-            return length;
-        }
-        public string getWeight()
-        {
-            return weight;
-        }
     }
 }
