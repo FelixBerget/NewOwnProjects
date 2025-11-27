@@ -50,6 +50,7 @@ namespace OwnProject
                 else if (index == "meny")
                 {
                     Console.WriteLine(DinoFacts.getMenu());
+                    Console.WriteLine(CrocodileInfo.getMenu());
                 }
                 else if (index == "hjelp")
                 {
@@ -94,7 +95,7 @@ namespace OwnProject
                 {
                     int intIndex = Convert.ToInt32(index);
                     Console.WriteLine(DinoFacts.getDinoInfo(intIndex));
-                    if (intIndex <= DinoFacts.getListLength()) {
+                    if (intIndex >= DinoFacts.getListLength()) {
                         Console.WriteLine(CrocodileInfo.getCrocodileInfo(intIndex - DinoFacts.getListLength()));
 
                     }

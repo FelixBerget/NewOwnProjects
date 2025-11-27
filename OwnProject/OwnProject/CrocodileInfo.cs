@@ -21,7 +21,7 @@ namespace OwnProject
             string returnString = "\n";
             for (int i = 0; i < Crocodilians.Count; i++)
             {
-                returnString += "\n Nummmer " + i + " - " + Crocodilians[i].getName() + "\n";
+                returnString += "\n Nummmer " + (i+DinoFacts.getListLength()) + " - " + Crocodilians[i].getName() + "\n";
             }
             return returnString;
         }
