@@ -39,9 +39,12 @@ namespace OwnProject
                         notValid = true;
                     }
                 };
-                if (index == "theropod" || index == "sauropod" || index == "hadrosaur" || index == "alligator"|| index == "krokodille")
+                if (index == "theropod" || index == "sauropod" || index == "hadrosaur")
                 {
                     Console.WriteLine(DinoFacts.getAllOfSource(index));
+                }
+                else if (index == "alligator" || index == "krokodille")
+                {
                     Console.WriteLine(CrocodileInfo.getAllOfSource(index));
                 }
                 else if (index == "meny")
@@ -91,7 +94,7 @@ namespace OwnProject
                 {
                     int intIndex = Convert.ToInt32(index);
                     Console.WriteLine(DinoFacts.getDinoInfo(intIndex));
-                    if(intIndex <= DinoFacts.getListLength()){
+                    if (intIndex <= DinoFacts.getListLength()) {
                         Console.WriteLine(CrocodileInfo.getCrocodileInfo(intIndex - DinoFacts.getListLength()));
 
                     }
