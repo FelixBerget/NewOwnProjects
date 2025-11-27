@@ -30,7 +30,7 @@ namespace OwnProject
         public static string GetHelp()
         {
 
-            return "\n For meny skriv (meny), for spesifikke dinosaur typer skriv arttypen f.eks.(theropod), for å søke i beskrivelsen som f.eks. kjøtteter skriv (søk), for å søke direkte etter navn så skriv (navnsøk), og for dinosaur så skriv f.eks. (2) Skriv til dinosaur eller krokodille etter dem\n";
+            return "\n For meny skriv (meny), for spesifikke dinosaur typer skriv arttypen f.eks.(theropod), for å søke i beskrivelsen som f.eks. kjøtteter skriv (søk), for å søke direkte etter navn så skriv (navnsøk), og for dinosaur så skriv f.eks. (2) Skriv til dinosaur eller krokodille når du søker etter lyd\n";
         }
         public static string getDinoInfo(int index)
         {
