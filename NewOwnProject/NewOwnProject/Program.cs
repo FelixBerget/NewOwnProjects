@@ -5,8 +5,20 @@
         static void Main(string[] args)
         {
             Store Rema1000 = new Store();
-            Item FrozenPizza = new Item("Frozen Pizza", 70, 10);
-            Item CocaCola = new Item("Coca Cola", 25, 100);
+            Item FrozenPizza = new Item();
+            FrozenPizza.Name = "Frossen Pizza";
+            FrozenPizza.Price = 80;
+            FrozenPizza.Stock = 15;
+            Item CocaCola = new Item();
+            CocaCola.Name = "Coca Cola";
+            CocaCola.Price = 25;
+            CocaCola.Stock = 100;
+            FreshItem Apple = new FreshItem();
+            Apple.Name = "Eple";
+            Apple.Price = 10;
+            Apple.Stock = 50;
+            Apple.DaysLeft = 5;
+
             Rema1000.AddToList(FrozenPizza);
             Rema1000.AddToList(CocaCola);
 

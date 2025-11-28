@@ -10,10 +10,5 @@ namespace NewOwnProject
         public int Price { get; set; }
         public int Stock { get; set; }
 
-        public Item(string newName, int newPrice, int newStock) {
-            Name = newName;
-            Price = newPrice;
-            Stock = newStock;
-        }
     }
 }
