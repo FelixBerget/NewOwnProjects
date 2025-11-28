@@ -22,6 +22,8 @@
             Rema1000.AddToList(FrozenPizza);
             Rema1000.AddToList(CocaCola);
 
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.BackgroundColor = ConsoleColor.White;
             while (true)
             {
                 string WritingString = (ReadLine("\nSøk", Rema1000));
