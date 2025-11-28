@@ -30,7 +30,7 @@ namespace NewOwnProject
         {
             if (index < Products.Count)
             {
-                return Products[index].Name + " " + Products[index].Price + " kr og det er " + Products[index].Stock + " av dem igjen";
+                return "\n" + Products[index].Name + " " + Products[index].Price + " kr og det er " + Products[index].Stock + " av dem igjen";
             }
             return string.Empty;
         }
@@ -45,7 +45,7 @@ namespace NewOwnProject
                     index = i;
                 }
             }
-            return Products[index].Name + " " + Products[index].Price + " kr og det er " + Products[index].Stock + " av dem igjen";
+            return "\n" + Products[index].Name + " " + Products[index].Price + " kr og det er " + Products[index].Stock + " av dem igjen";
 
         }
 

@@ -10,9 +10,18 @@
             Rema1000.AddToList(FrozenPizza);
             Rema1000.AddToList(CocaCola);
 
-            Console.WriteLine(Rema1000.GetProductByName("Coca Cola"));
-            Console.WriteLine(Rema1000.GetAllItems());
-            Console.WriteLine(ReadLine("Søk", Rema1000));
+            while (true)
+            {
+                string WritingString = (ReadLine("\nSøk", Rema1000));
+                if (WritingString == "\n quit")
+                {
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine(WritingString);
+                }
+            }
 
         }
 
@@ -20,7 +29,11 @@
         {
             Console.WriteLine(line);
             string ReturnString = Console.ReadLine();
-            if (IsString(ReturnString))
+            if (ReturnString=="")
+            {
+                return "\n quit";
+            }
+            else if (IsString(ReturnString))
             {
                 return store.GetProductByName(ReturnString);
             }
