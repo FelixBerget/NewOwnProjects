@@ -13,11 +13,6 @@ namespace SelfProject
             return Console.ReadLine();
         }
 
-        public static void ChangeColor(ConsoleColor foreColor,ConsoleColor backColor)
-        {
-            Console.ForegroundColor = foreColor;
-            Console.ForegroundColor = backColor;
-        }
 
         public static bool ReadBool(string input)
         {
