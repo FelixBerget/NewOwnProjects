@@ -14,6 +14,10 @@
                 Console.ForegroundColor= ConsoleColor.White;
                 bool truth = MyConsole.ReadBool(returnValue);
                 Console.WriteLine(truth);
+                if(truth == true)
+                {
+                    return;
+                }
 
             }
         }
