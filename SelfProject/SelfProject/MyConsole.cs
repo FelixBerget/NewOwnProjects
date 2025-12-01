@@ -18,5 +18,14 @@ namespace SelfProject
             Console.ForegroundColor = foreColor;
             Console.ForegroundColor = backColor;
         }
+
+        public static bool ReadBool(string input)
+        {
+            if(input == null) return false;
+            if(input.Length == 0) return false;
+            if (input == "true") return true;
+            return false;
+
+        }
     }
 }
