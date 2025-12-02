@@ -34,5 +34,19 @@ namespace SelfProject
                 Console.WriteLine(input[i]);
             }
         }
+
+        public static void ReversedInput(string input)
+        {
+            if (input.Length == 0)
+            {
+                return;
+            }
+            string finishString = "";
+            for (int i = input.Length - 1; i >= 0; i--)
+            {
+                finishString += input[i];
+            }
+            Console.WriteLine(finishString);
+        }
     }
 }

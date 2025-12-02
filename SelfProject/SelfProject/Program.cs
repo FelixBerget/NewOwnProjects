@@ -6,6 +6,8 @@
         {
             while (true)
             {
+                MyConsole.ReversedInput("Yo");
+                MyConsole.ReversedInput("Hello");
                 MyConsole.WriteDownwards("Hello guys");
                 string returnValue = MyConsole.GetInfo("What do you want to say");
                 Console.BackgroundColor= ConsoleColor.White;
