@@ -63,5 +63,14 @@ namespace SelfProject
             }
             Console.WriteLine(finishedString);
         }
+        public static void MakeRandomWord(string input)
+        {
+            Random random = new Random();
+            string finishedString = "";
+            for (int i = 0; i < input.Length; ++i) {
+                finishedString += input[random.Next(25)];
+            }
+            Console.WriteLine(finishedString);
+        }
     }
 }
