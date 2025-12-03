@@ -9,6 +9,7 @@
                 MyConsole.ReversedInput("Yo");
                 MyConsole.ReversedInput("Hello");
                 MyConsole.WriteDownwards("Hello guys");
+                MyConsole.MakeIntoOneWord("Yo guys i am here");
                 string returnValue = MyConsole.GetInfo("What do you want to say");
                 Console.BackgroundColor= ConsoleColor.White;
                 Console.ForegroundColor= ConsoleColor.Red;
