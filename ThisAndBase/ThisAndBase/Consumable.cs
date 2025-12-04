@@ -6,7 +6,7 @@ namespace ThisAndBase
 {
     internal interface Consumable
     {
-        string GetName();
-        int GetPrice();
+        public string GetName();
+        public int GetPrice();
     }
 }

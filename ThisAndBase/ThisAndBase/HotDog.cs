@@ -6,8 +6,6 @@ namespace ThisAndBase
 {
     internal class HotDog : Food
     {
-        private string name;
-        private int price;
         public HotDog() : base() { }
     }
 }
