@@ -14,18 +14,18 @@ namespace ThreeInARow
             string BoardString = "    a b c \n   ┌─────┐";
             for (int i = 0; i < squares.Length; i++)
             {
-                if (i % 3 == 0)
+                if (i % 4 == 0)
                 {
                     BoardString +=   "\n" + SideCounter +  "  │";
                     BoardString += squares[i].IsOwnedByPlayerOne() ? "X" : " ";
                     BoardString += squares[i].IsOwnedByPlayerTwo() ? "O" : " ";
                     SideCounter++;
                 }
-                else if (i % 3 == 1)
+                else if (i % 4 == 3)
                 {
                     BoardString += squares[i].IsOwnedByPlayerOne() ? "X" : " ";
                     BoardString += squares[i].IsOwnedByPlayerTwo() ? "O" : " ";
-                    BoardString += " │";
+                    BoardString += "│";
                 }
                 else
                 {

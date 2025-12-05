@@ -29,7 +29,7 @@ namespace ThreeInARow
         {
             int randomNum = 0;
             Random r = new Random();
-            while (b[randomNum].IsOwnedByPlayerOne())
+            while (b[randomNum].IsOwnedByPlayerOne() && b[randomNum].IsOwnedByPlayerTwo())
             {
                 randomNum = r.Next(0, 8);
             }
