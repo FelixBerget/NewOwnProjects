@@ -30,7 +30,11 @@ namespace ThreeInARow
         public void Mark(int index) {
             if (b[index].IsOwnedByPlayerTwo() || b[index].IsOwnedByPlayerOne())
             {
+                Console.WriteLine("Already taken, write another");
+                int newIndex = Convert.ToInt32(Console.ReadLine());
+                Mark(newIndex);
                 return;
+
             }
             b[index].PlayerTakes(true);
         }
