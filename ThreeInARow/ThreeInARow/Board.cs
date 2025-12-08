@@ -53,7 +53,7 @@ namespace ThreeInARow
                 {
 
                 }
-                else if (b[i].IsOwnedByPlayerOne() && b[i+1].IsOwnedByPlayerOne() && i + 1 % 3 != 0 && b[i + 2].IsOwnedByPlayerOne() && i + 2 % 3 != 0)
+                else if (b[i].IsOwnedByPlayerOne() && b[i+1].IsOwnedByPlayerOne() && (i + 1) % 3 != 0 && b[i + 2].IsOwnedByPlayerOne() && (i + 2) % 3 != 0)
                 {
                     return true;
                 }
@@ -71,7 +71,7 @@ namespace ThreeInARow
                 {
 
                 }
-                else if (b[i].IsOwnedByPlayerOne() && b[i+4].IsOwnedByPlayerOne() && i+4%3!=0 && b[i + 8].IsOwnedByPlayerOne() && i + 8 % 3 != 0)
+                else if (b[i].IsOwnedByPlayerOne() && b[i+4].IsOwnedByPlayerOne() && (i+4)%3!=0 && b[i + 8].IsOwnedByPlayerOne() && (i + 8) % 3 != 0)
                 {
                     return true;
                 }
@@ -87,7 +87,7 @@ namespace ThreeInARow
                 {
                     
                 }
-                else if (b[i].IsOwnedByPlayerTwo() && b[i + 1].IsOwnedByPlayerTwo() && i + 1 % 3 != 0 && b[i + 2].IsOwnedByPlayerTwo() && i + 2 % 3 != 0)
+                else if (b[i].IsOwnedByPlayerTwo() && b[i + 1].IsOwnedByPlayerTwo() && (i + 1) % 3 != 0 && b[i + 2].IsOwnedByPlayerTwo() && (i + 2) % 3 != 0)
                 {
                     return true;
                 }
@@ -103,7 +103,7 @@ namespace ThreeInARow
                 {
 
                 }
-                else if (b[i].IsOwnedByPlayerTwo() && b[i + 4].IsOwnedByPlayerTwo() && i + 4 % 3 != 0 && b[i + 8].IsOwnedByPlayerTwo() && i + 8 % 3 != 0)
+                else if (b[i].IsOwnedByPlayerTwo() && b[i + 4].IsOwnedByPlayerTwo() && (i + 4) % 3 != 0 && b[i + 8].IsOwnedByPlayerTwo() && (i + 8) % 3 != 0)
                 {
                     return true;
                 }
