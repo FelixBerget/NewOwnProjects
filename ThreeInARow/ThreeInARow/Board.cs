@@ -19,6 +19,14 @@ namespace ThreeInARow
         {
             return b;
         }
+
+        public void ResetBoard()
+        {
+            for(int i = 0; i < b.Length; i++)
+            {
+                b[i].ResetPiece();
+            }
+        }
         public void Mark(int index) {
             if (b[index].IsOwnedByPlayerTwo() || b[index].IsOwnedByPlayerOne())
             {
@@ -41,11 +49,11 @@ namespace ThreeInARow
         {
             for (int i = 0; i < b.Length-1; i++)
             {
-                if (i + 1 > 8)
+                if (i + 2 > 8)
                 {
 
                 }
-                else if (b[i].IsOwnedByPlayerOne() && b[i+1].IsOwnedByPlayerOne() && b[i + 2].IsOwnedByPlayerOne())
+                else if (b[i].IsOwnedByPlayerOne() && b[i+1].IsOwnedByPlayerOne() && i + 1 % 3 != 0 && b[i + 2].IsOwnedByPlayerOne() && i + 2 % 3 != 0)
                 {
                     return true;
                 }
@@ -63,7 +71,7 @@ namespace ThreeInARow
                 {
 
                 }
-                else if (b[i].IsOwnedByPlayerOne() && b[i+4].IsOwnedByPlayerOne() && i+4%3!=0 && b[i + 8].IsOwnedByPlayerOne() && i + 7 % 3 != 0)
+                else if (b[i].IsOwnedByPlayerOne() && b[i+4].IsOwnedByPlayerOne() && i+4%3!=0 && b[i + 8].IsOwnedByPlayerOne() && i + 8 % 3 != 0)
                 {
                     return true;
                 }
@@ -75,11 +83,11 @@ namespace ThreeInARow
         {
             for (int i = 0; i < b.Length-1; i++)
             {
-                if (i + 1 > 8)
+                if (i + 2 > 8)
                 {
                     
                 }
-                else if (b[i].IsOwnedByPlayerTwo() && b[i + 1].IsOwnedByPlayerTwo() && b[i + 2].IsOwnedByPlayerTwo())
+                else if (b[i].IsOwnedByPlayerTwo() && b[i + 1].IsOwnedByPlayerTwo() && i + 1 % 3 != 0 && b[i + 2].IsOwnedByPlayerTwo() && i + 2 % 3 != 0)
                 {
                     return true;
                 }
@@ -95,7 +103,7 @@ namespace ThreeInARow
                 {
 
                 }
-                else if (b[i].IsOwnedByPlayerTwo() && b[i + 4].IsOwnedByPlayerTwo() && i + 4 % 3 != 0 && b[i + 7].IsOwnedByPlayerTwo() && i + 7 % 3 != 0)
+                else if (b[i].IsOwnedByPlayerTwo() && b[i + 4].IsOwnedByPlayerTwo() && i + 4 % 3 != 0 && b[i + 8].IsOwnedByPlayerTwo() && i + 8 % 3 != 0)
                 {
                     return true;
                 }

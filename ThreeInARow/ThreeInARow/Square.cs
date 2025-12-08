@@ -36,5 +36,10 @@ namespace ThreeInARow
         {
             return OwnedByPlayerTwo;
         }
+        public void ResetPiece()
+        {
+            OwnedByPlayerOne= false;
+            OwnedByPlayerTwo = false;
+        }
     }
 }
