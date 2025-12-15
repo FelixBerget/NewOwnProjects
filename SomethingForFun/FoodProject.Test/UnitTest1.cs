@@ -92,5 +92,12 @@ namespace FoodProject.Test
             }
             Assert.That(result, Is.EqualTo(expectaton));
         }
+
+        [TestCase("iTAlIa","italia")]
+        public void TestMakeLowercase(string word,string expectation)
+        {
+            string result = word.ToLower();
+            Assert.That(result, Is.EqualTo(expectation));
+        }
     }
 }
