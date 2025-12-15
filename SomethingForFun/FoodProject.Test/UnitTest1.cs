@@ -99,5 +99,17 @@ namespace FoodProject.Test
             string result = word.ToLower();
             Assert.That(result, Is.EqualTo(expectation));
         }
+        [Test]
+        public void TestRemove()
+        {
+            List<string> list = new List<string>();
+            list.Add("hello");
+            list.Add("ladies");
+            list.Add("and");
+            list.Add("gentlemen");
+            list.Remove("hello");
+            Assert.That(list[0], Is.EqualTo("ladies"));
+            Assert.That(list.Count, Is.EqualTo(3));
+        }
     }
 }
