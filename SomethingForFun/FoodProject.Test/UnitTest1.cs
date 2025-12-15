@@ -79,5 +79,18 @@ namespace FoodProject.Test
             }
             Assert.That(numberOfUpperCase, Is.EqualTo(1));
         }
+
+        [TestCase("Hello","olleH")]
+        [TestCase("Yo","oY")]
+        [TestCase("Dude","eduD")]
+        public void TestReversedWord(string word,string expectaton)
+        {
+            string result = "";
+            for(int i = word.Length-1; i >= 0; i--)
+            {
+                result += word[i];
+            }
+            Assert.That(result, Is.EqualTo(expectaton));
+        }
     }
 }
