@@ -49,5 +49,20 @@ namespace FoodProject.Test
             int result = num1 * num2;
             Assert.That(result,Is.EqualTo(50));
         }
+
+        [TestCase(10)]
+        [TestCase(30)]
+        public void ModuloTest(int num)
+        {
+            int result = num % 2;
+            Assert.That(result, Is.EqualTo(0));
+        }
+        [TestCase(11)]
+        [TestCase(13)]
+        public void NoModuloTest(int num)
+        {
+            int result = num % 5;
+            Assert.That(result,Is.Not.EqualTo(0));
+        }
     }
 }
