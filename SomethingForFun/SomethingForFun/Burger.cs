@@ -26,5 +26,15 @@ namespace FoodProject
                 return "burger with " + patties + " patties and without tomatoes costs " + price;
             }
         }
+
+        public bool HasTomatoes()
+        {
+            return hasTomatoes;
+        }
+
+        public int GetPrice()
+        {
+            return price;
+        }
     }
 }
