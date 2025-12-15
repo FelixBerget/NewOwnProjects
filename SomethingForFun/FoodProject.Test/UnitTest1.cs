@@ -64,5 +64,20 @@ namespace FoodProject.Test
             int result = num % 5;
             Assert.That(result,Is.Not.EqualTo(0));
         }
+
+        [TestCase("Hello")]
+        public void CaseSensitiveTest(string text)
+        {
+            string upperCase = "QWERTYUIOPASDFGHJKLZXCVBNM";
+            int numberOfUpperCase = 0;
+            for(int i = 0; i < text.Length; i++)
+            {
+                if (upperCase.Contains(text[i]))
+                {
+                    numberOfUpperCase++;
+                }
+            }
+            Assert.That(numberOfUpperCase, Is.EqualTo(1));
+        }
     }
 }
