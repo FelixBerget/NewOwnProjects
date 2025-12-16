@@ -128,5 +128,14 @@ namespace FoodProject.Test
             string[] expectation = { "Joe", "John", "Bobby", "Frederick" };
             Assert.That(s.sortStringList(), Is.EqualTo(expectation));
         }
+
+        [TestCase(1.3542,1)]
+        [TestCase(5.853222,6)]
+        [TestCase(4.999999,5)]
+        public void TestConvertion(double testnumber, int expectation)
+        {
+            int returnInt = Convert.ToInt32(testnumber);
+            Assert.That(returnInt, Is.EqualTo(expectation));
+        }
     }
 }
