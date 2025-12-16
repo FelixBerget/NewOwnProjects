@@ -111,5 +111,13 @@ namespace FoodProject.Test
             Assert.That(list[0], Is.EqualTo("ladies"));
             Assert.That(list.Count, Is.EqualTo(3));
         }
+
+        [TestCase(3,"pizza","3 pizzas")]
+        [TestCase(5,"brocoli","5 brocolis")]
+        public void TestSentenceMaker(int number, string inputString, string expectation)
+        {
+            string result = number + " " + inputString +"s";
+            Assert.That(result,Is.EqualTo(expectation));
+        }
     }
 }
