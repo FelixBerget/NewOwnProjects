@@ -119,5 +119,14 @@ namespace FoodProject.Test
             string result = number + " " + inputString +"s";
             Assert.That(result,Is.EqualTo(expectation));
         }
+
+        [Test]
+        public void TestSort()
+        {
+            string[] words = { "Joe", "Bobby", "Frederick", "John" };
+            SortingAlgrorithms s = new SortingAlgrorithms(words);
+            string[] expectation = { "Joe", "John", "Bobby", "Frederick" };
+            Assert.That(s.sortStringList(), Is.EqualTo(expectation));
+        }
     }
 }
