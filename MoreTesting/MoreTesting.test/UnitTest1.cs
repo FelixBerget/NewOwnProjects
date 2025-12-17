@@ -31,7 +31,7 @@
         public void Test4()
         {
             FunctionsForTesting FunTest = new FunctionsForTesting();
-            Assert.Equal("h\ne\nl\nl\no\n", FunTest.VerticalString("hello "));
+            Assert.Equal("h\ne\nl\nl\no\n\ng\nu\ny\ns\n", FunTest.VerticalString("hello guys "));
         }
             
     }
