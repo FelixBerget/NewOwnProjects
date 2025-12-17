@@ -7,6 +7,7 @@
             Random r = new Random();
             FunctionsForTesting FunTest = new FunctionsForTesting();
             Console.WriteLine(FunTest.RandomizeCase("Harry",r));
+            Console.WriteLine(FunTest.VerticalString("Harry"));
         }
     }
 }

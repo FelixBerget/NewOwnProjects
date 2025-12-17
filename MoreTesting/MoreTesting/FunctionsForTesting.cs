@@ -30,7 +30,10 @@ namespace MoreTesting
             string ReturnString = "";
             for(int i = 0; i < Input.Length; i++)
             {
-                if(i != Input.Length - 1)
+                if (Input[i]==' ')
+                {
+                }
+                else if(i != Input.Length - 1)
                 {
                     ReturnString += Input[i] + "\n";
                 }

@@ -26,6 +26,13 @@
             FunctionsForTesting FunTest = new FunctionsForTesting();
             Assert.Equal("h\ne\nl\nl\no",FunTest.VerticalString("hello"));
         }
+        [Fact]
+
+        public void Test4()
+        {
+            FunctionsForTesting FunTest = new FunctionsForTesting();
+            Assert.Equal("h\ne\nl\nl\no\n", FunTest.VerticalString("hello "));
+        }
             
     }
 }
