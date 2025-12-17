@@ -1,0 +1,24 @@
+﻿namespace MoreTesting.test
+{
+    public class UnitTest1
+    {
+        [Fact]
+        public void Test1()
+        {
+            Random r  = new Random();
+            FunctionsForTesting FunTest = new FunctionsForTesting();
+            Assert.Equal("hello", FunTest.RandomizeCase("hello", r).ToLower());
+        }
+
+        [Theory]
+        [InlineData("hello")]
+        public void Test2(string n)
+        {
+            Random r = new Random();
+            FunctionsForTesting FunTest = new FunctionsForTesting();
+            Assert.Equal(n, FunTest.RandomizeCase(n,r).ToLower());
+
+        }
+            
+    }
+}
