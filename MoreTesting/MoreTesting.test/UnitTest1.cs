@@ -19,6 +19,13 @@
             Assert.Equal(n, FunTest.RandomizeCase(n,r).ToLower());
 
         }
+
+        [Fact]
+        public void Test3()
+        {
+            FunctionsForTesting FunTest = new FunctionsForTesting();
+            Assert.Equal("h\ne\nl\nl\no",FunTest.VerticalString("hello"));
+        }
             
     }
 }

@@ -25,5 +25,21 @@ namespace MoreTesting
             }
             return ReturnString;
         }
+        public string VerticalString(string Input)
+        {
+            string ReturnString = "";
+            for(int i = 0; i < Input.Length; i++)
+            {
+                if(i != Input.Length - 1)
+                {
+                    ReturnString += Input[i] + "\n";
+                }
+                else
+                {
+                    ReturnString += Input[i];
+                }
+            }
+            return ReturnString;
+        }
     }
 }
