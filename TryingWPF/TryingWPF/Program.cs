@@ -18,6 +18,10 @@ namespace TryingWPF
             var list = new List<string>();
             list.Add("Hello");
             list.Add("Guys");
+            var secondlist = new List<int>();
+            secondlist.Add(2);
+            secondlist.Add(3);
+            secondlist.Add(4);
             var panel = new StackPanel()
             {
                 Orientation = Orientation.Vertical
@@ -35,7 +39,7 @@ namespace TryingWPF
                 Text = "Come on lets play golf and eat sardines\nI too am a big fan of golf!"
                 
             };
-            var listbox = new ListBox()
+            var listbox1 = new ListBox()
             {
                 Width = 100,
                 Height = 100,
@@ -43,10 +47,19 @@ namespace TryingWPF
                 ItemsSource = list
 
             };
+            var listbox2 = new ListBox()
+            {
+                Width = 300,
+                Height = 400,
+                BorderBrush = brush,
+                ItemsSource = secondlist,
+                HorizontalContentAlignment = HorizontalAlignment.Right,
+            };
             panel.Children.Add(button);
             panel.Children.Add(label1);
             panel.Children.Add(textblock);
-            panel.Children.Add(listbox);
+            panel.Children.Add(listbox1);
+            panel.Children.Add(listbox2);
             window.Content = panel;
             app.Run(window);
         }
